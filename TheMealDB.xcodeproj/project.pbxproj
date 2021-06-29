@@ -17,6 +17,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0C28B358268BAF78006FD71A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CBB3E4B26851BA20049DA27 /* DB.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CBB3E3026851BA20049DA27;
+			remoteInfo = DB;
+		};
+		0CA024BF2686B4D800919D9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CBB3EDC268623510049DA27 /* DataRepos.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CBB3EC2268623510049DA27;
+			remoteInfo = DataRepos;
+		};
+		0CA024C12686B4D800919D9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CBB3EDC268623510049DA27 /* DataRepos.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CBB3ECB268623510049DA27;
+			remoteInfo = DataReposTests;
+		};
 		0CBB3E0B26851B0E0049DA27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0CBB3DEC26851B0B0049DA27 /* Project object */;
@@ -133,6 +154,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CA024B92686B4D400919D9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CA024C02686B4D800919D9C /* DataRepos.framework */,
+				0CA024C22686B4D800919D9C /* DataReposTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0CBB3DEB26851B0B0049DA27 = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +290,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0C28B359268BAF78006FD71A /* PBXTargetDependency */,
 			);
 			name = TheMealDB;
 			productName = TheMealDB;
@@ -341,6 +372,10 @@
 					ProjectRef = 0CBB3F2B26862FD40049DA27 /* CategoryList.xcodeproj */;
 				},
 				{
+					ProductGroup = 0CA024B92686B4D400919D9C /* Products */;
+					ProjectRef = 0CBB3EDC268623510049DA27 /* DataRepos.xcodeproj */;
+				},
+				{
 					ProductGroup = 0CBB3EFE26862F4C0049DA27 /* Products */;
 					ProjectRef = 0CBB3E4B26851BA20049DA27 /* DB.xcodeproj */;
 				},
@@ -359,6 +394,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		0CA024C02686B4D800919D9C /* DataRepos.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DataRepos.framework;
+			remoteRef = 0CA024BF2686B4D800919D9C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA024C22686B4D800919D9C /* DataReposTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DataReposTests.xctest;
+			remoteRef = 0CA024C12686B4D800919D9C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		0CBB3EFB26862F4C0049DA27 /* Networking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -457,6 +506,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0C28B359268BAF78006FD71A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DB;
+			targetProxy = 0C28B358268BAF78006FD71A /* PBXContainerItemProxy */;
+		};
 		0CBB3E0C26851B0E0049DA27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0CBB3DF326851B0B0049DA27 /* TheMealDB */;
@@ -593,7 +647,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TheMealDB/Preview Content\"";
-				DEVELOPMENT_TEAM = Q89K5J7JC5;
+				DEVELOPMENT_TEAM = J8PM7K467L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TheMealDB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -615,7 +669,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TheMealDB/Preview Content\"";
-				DEVELOPMENT_TEAM = Q89K5J7JC5;
+				DEVELOPMENT_TEAM = J8PM7K467L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TheMealDB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;

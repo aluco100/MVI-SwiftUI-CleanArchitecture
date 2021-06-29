@@ -41,9 +41,9 @@ public class CategoryManagedObject: NSManagedObject, Decodable {
 
         // Mapping Some Properties
         
-        self.idCategory = try container.decodeIfPresent(String.self, forKey: .idCategory)
-        self.strCategory = try container.decodeIfPresent(String.self, forKey: .strCategory)
-        self.strCategoryDescription = try container.decodeIfPresent(String.self, forKey: .strCategoryDescription)
-        self.strCategoryThumb = try container.decodeIfPresent(String.self, forKey: .strCategoryThumb)
+        self.idCategory = try? container.decodeIfPresent(String.self, forKey: .idCategory)
+        self.strCategory = try? container.decodeIfPresent(String.self, forKey: .strCategory)
+        self.strCategoryDescription = try? container.decodeIfPresent(String.self, forKey: .strCategoryDescription)
+        self.strCategoryThumb = try? container.decodeIfPresent(String.self, forKey: .strCategoryThumb)
     }
 }
