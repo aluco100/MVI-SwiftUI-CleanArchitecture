@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C28B364268CC908006FD71A /* ServiceLocatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28B363268CC908006FD71A /* ServiceLocatorProtocol.swift */; };
+		0C28B366268CCA88006FD71A /* CategoryServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28B365268CCA88006FD71A /* CategoryServiceLocator.swift */; };
 		0CBB3ECC268623510049DA27 /* DataRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBB3EC2268623510049DA27 /* DataRepos.framework */; };
 		0CBB3ED1268623510049DA27 /* DataReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB3ED0268623510049DA27 /* DataReposTests.swift */; };
 		0CBB3ED3268623510049DA27 /* DataRepos.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CBB3EC5268623510049DA27 /* DataRepos.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C28B363268CC908006FD71A /* ServiceLocatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocatorProtocol.swift; sourceTree = "<group>"; };
+		0C28B365268CCA88006FD71A /* CategoryServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceLocator.swift; sourceTree = "<group>"; };
 		0CBB3EC2268623510049DA27 /* DataRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBB3EC5268623510049DA27 /* DataRepos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataRepos.h; sourceTree = "<group>"; };
 		0CBB3EC6268623510049DA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C28B362268CC8C8006FD71A /* ServiceLocators */ = {
+			isa = PBXGroup;
+			children = (
+				0C28B363268CC908006FD71A /* ServiceLocatorProtocol.swift */,
+				0C28B365268CCA88006FD71A /* CategoryServiceLocator.swift */,
+			);
+			path = ServiceLocators;
+			sourceTree = "<group>";
+		};
 		0CBB3EB8268623510049DA27 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		0CBB3EC4268623510049DA27 /* DataRepos */ = {
 			isa = PBXGroup;
 			children = (
+				0C28B362268CC8C8006FD71A /* ServiceLocators */,
 				0CBB3EE5268623630049DA27 /* Gateways */,
 				0CBB3EE8268624AA0049DA27 /* DataRepositories */,
 				0CBB3EC5268623510049DA27 /* DataRepos.h */,
@@ -256,7 +270,9 @@
 			files = (
 				0CBB3EEA268624D50049DA27 /* CategoryAPIRepository.swift in Sources */,
 				0CBB3EF426862A5D0049DA27 /* CategoryCoreDataRepository.swift in Sources */,
+				0C28B364268CC908006FD71A /* ServiceLocatorProtocol.swift in Sources */,
 				0CBB3EE72686237E0049DA27 /* CategoryGateway.swift in Sources */,
+				0C28B366268CCA88006FD71A /* CategoryServiceLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

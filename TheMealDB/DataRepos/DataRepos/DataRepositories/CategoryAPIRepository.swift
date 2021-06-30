@@ -10,15 +10,15 @@ import Combine
 import DB
 import Networking
 
-public class CategoryAPIRepository: CategoryGateway {
+class CategoryAPIRepository: CategoryGateway, ServiceInitializable {
     
     // MARK: - Public init
     
-    public init() {}
+    required init() {}
     
     // MARK: - Get Categories
     
-    public func getCategories() -> AnyPublisher<[CategoryManagedObject], Error> {
+    func getCategories() -> AnyPublisher<[CategoryManagedObject], Error> {
         guard let url = try? APIClient.fetchCategories(params: nil).asURLRequest() else {
             return Just([])
                 .setFailureType(to: Error.self)
