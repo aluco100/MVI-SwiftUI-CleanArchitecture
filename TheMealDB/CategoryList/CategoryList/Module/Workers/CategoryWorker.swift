@@ -13,7 +13,7 @@ class CategoryWorker: FetchCategories {
     // MARK: - Use Cases
     
     var categoryGateway: CategoryGateway
-    fileprivate var serviceLocator: CategoryServiceLocator = CategoryServiceLocator()
+    private(set) var serviceLocator: CategoryServiceLocator = CategoryServiceLocator()
     
     // MARK: - Dependency Injection
     

@@ -15,7 +15,7 @@ public class CategoryServiceLocator: ServiceLocatorProtocol {
     
     // MARK: - Cache
     
-    var services: [String: Any] = [:]
+    public var services: [String: Any] = [:]
     
     // MARK: - Get Service
     
@@ -32,7 +32,7 @@ public class CategoryServiceLocator: ServiceLocatorProtocol {
     
     // MARK: - Register
     
-    func register<S: AnyObject>(service: S) {
+    public func register<S: AnyObject>(service: S) {
         self.services[String(describing: service.self)] = service
     }
     

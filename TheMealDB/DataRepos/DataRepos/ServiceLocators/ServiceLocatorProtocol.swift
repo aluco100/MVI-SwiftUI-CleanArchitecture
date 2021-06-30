@@ -11,7 +11,7 @@ public protocol ServiceInitializable: AnyObject {
     init()
 }
 
-protocol ServiceLocatorProtocol: AnyObject {
+public protocol ServiceLocatorProtocol: AnyObject {
     
     // Cache
     
