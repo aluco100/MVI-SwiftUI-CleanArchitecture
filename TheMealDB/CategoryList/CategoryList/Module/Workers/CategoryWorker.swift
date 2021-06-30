@@ -13,11 +13,18 @@ class CategoryWorker: FetchCategories {
     // MARK: - Use Cases
     
     var categoryGateway: CategoryGateway
+    fileprivate var serviceLocator: CategoryServiceLocator = CategoryServiceLocator()
     
     // MARK: - Dependency Injection
     
-    init(_ repo: CategoryGateway) {
-        categoryGateway = repo
+    init(with cache: Bool) {
+        if cache {
+            let repo: CategoryCoreDataRepository = serviceLocator.getService()
+            categoryGateway = repo
+        }else {
+            let repo: CategoryAPIRepository = serviceLocator.getService()
+            categoryGateway = repo
+        }
     }
     
 }

@@ -10,15 +10,15 @@ import Combine
 import DB
 import CoreData
 
-class CategoryCoreDataRepository: CategoryGateway, ServiceInitializable {
+public class CategoryCoreDataRepository: CategoryGateway, ServiceInitializable {
     
     // MARK: - Public init
     
-    required init() { }
+    required public init() { }
     
     // MARK: - Get Categories
     
-    func getCategories() -> AnyPublisher<[CategoryManagedObject], Error> {
+    public func getCategories() -> AnyPublisher<[CategoryManagedObject], Error> {
         Future<[CategoryManagedObject], Error> { promise in
             let context = CoreDataStack.viewContext
             

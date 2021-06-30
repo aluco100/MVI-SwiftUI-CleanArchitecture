@@ -13,7 +13,7 @@ class CategoryListInteractor {
     
     // MARK: - Properties
     
-    var worker: CategoryWorker = CategoryWorker(CategoryAPIRepository())
+    var worker: CategoryWorker = CategoryWorker(with: false)
     weak var presenter: CategoryListPresenter?
     fileprivate var subscriptions = Set<AnyCancellable>()
     

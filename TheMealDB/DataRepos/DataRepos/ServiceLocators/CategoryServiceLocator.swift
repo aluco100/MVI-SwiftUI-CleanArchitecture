@@ -9,6 +9,10 @@ import Foundation
 
 public class CategoryServiceLocator: ServiceLocatorProtocol {
     
+    // MARK: - Init
+    
+    public init() {}
+    
     // MARK: - Cache
     
     var services: [String: Any] = [:]
