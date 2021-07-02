@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C28B36A268F6517006FD71A /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 0C28B369268F6517006FD71A /* ViewInspector */; };
+		0C28B370268F67BA006FD71A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C28B36F268F67BA006FD71A /* XCTest.framework */; };
+		0C28B371268F67BA006FD71A /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C28B36F268F67BA006FD71A /* XCTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0CBB3F1B26862FD40049DA27 /* CategoryList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBB3F1126862FD40049DA27 /* CategoryList.framework */; };
 		0CBB3F2026862FD40049DA27 /* CategoryListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB3F1F26862FD40049DA27 /* CategoryListTests.swift */; };
 		0CBB3F2226862FD40049DA27 /* CategoryList.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CBB3F1426862FD40049DA27 /* CategoryList.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +43,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0CBB3F3D268630BB0049DA27 /* DataRepos.framework in Embed Frameworks */,
+				0C28B371268F67BA006FD71A /* XCTest.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +51,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C28B36B268F677E006FD71A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/iOSSupport/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
+		0C28B36D268F67A1006FD71A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0C28B36F268F67BA006FD71A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0CBB3F1126862FD40049DA27 /* CategoryList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CategoryList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBB3F1426862FD40049DA27 /* CategoryList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryList.h; sourceTree = "<group>"; };
 		0CBB3F1526862FD40049DA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +79,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CBB3F3C268630BB0049DA27 /* DataRepos.framework in Frameworks */,
+				0C28B370268F67BA006FD71A /* XCTest.framework in Frameworks */,
+				0C28B36A268F6517006FD71A /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +154,9 @@
 		0CBB3F3A268630BB0049DA27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C28B36F268F67BA006FD71A /* XCTest.framework */,
+				0C28B36B268F677E006FD71A /* SwiftUI.framework */,
+				0C28B36D268F67A1006FD71A /* SwiftUI.framework */,
 				0CBB3F582686451D0049DA27 /* DB.framework */,
 				0CBB3F41268632C30049DA27 /* DB.framework */,
 				0CBB3F3B268630BB0049DA27 /* DataRepos.framework */,
@@ -242,6 +254,9 @@
 			dependencies = (
 			);
 			name = CategoryList;
+			packageProductDependencies = (
+				0C28B369268F6517006FD71A /* ViewInspector */,
+			);
 			productName = CategoryList;
 			productReference = 0CBB3F1126862FD40049DA27 /* CategoryList.framework */;
 			productType = "com.apple.product-type.framework";
@@ -291,6 +306,9 @@
 				Base,
 			);
 			mainGroup = 0CBB3F0726862FD40049DA27;
+			packageReferences = (
+				0C28B368268F6517006FD71A /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 0CBB3F1226862FD40049DA27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -389,6 +407,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -453,6 +472,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -597,6 +617,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0C28B368268F6517006FD71A /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C28B369268F6517006FD71A /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C28B368268F6517006FD71A /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0CBB3F0826862FD40049DA27 /* Project object */;
 }

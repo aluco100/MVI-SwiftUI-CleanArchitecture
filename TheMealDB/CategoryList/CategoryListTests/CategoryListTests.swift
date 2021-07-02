@@ -9,6 +9,7 @@ import XCTest
 @testable import CategoryList
 import Combine
 import DataRepos
+import ViewInspector
 
 class CategoryListTests: XCTestCase {
 
@@ -144,6 +145,63 @@ class CategoryListTests: XCTestCase {
             XCTAssertTrue(!viewModel.imageData.isEmpty)
             
         }
+    }
+    
+    // MARK: - Test Category Row
+    
+    func testCategoryRow() throws {
+        // Instance swift ui view
+        
+        let subject = CategoryRow(category: CategoryResult(id: "001", name: "Test name", thumbnail: "https://www.pauta.cl/pauta/site/artic/20190212/imag/foto_0000000420190212180953/pizza-3000274_960_720.jpg", description: "Test description"), viewModel: CategoryRowViewModel())
+        
+        // Inspect Title
+        
+        let title = try subject.body
+            .inspect()
+            .hStack(0)
+            .vStack(1)
+            .text(0)
+            .string()
+        
+        XCTAssert(title == "Test name", title)
+        
+        // Inspect description
+        
+        let description = try subject.body
+            .inspect()
+            .hStack(0)
+            .vStack(1)
+            .text(1)
+            .string()
+        
+        XCTAssert(description == "Test description", description)
+        
+        // load image
+        
+        subject.viewModel.downloadImage("https://www.pauta.cl/pauta/site/artic/20190212/imag/foto_0000000420190212180953/pizza-3000274_960_720.jpg")
+        
+        // Make waiter
+        
+        let promise = expectation(description: "Image loaded")
+        
+        let waiter = XCTWaiter.wait(for: [promise], timeout: 1.0)
+        
+        if waiter == XCTWaiter.Result.timedOut {
+            
+            // Inspect image
+            
+            let image = try subject.body
+                .inspect()
+                .hStack(0)
+                .vStack(0)
+                .image(0)
+                .actualImage()
+                .uiImage()
+            XCTAssertTrue(image.pngData() != nil)
+                
+            
+        }
+        
     }
     
     // MARK: - Check Category List
