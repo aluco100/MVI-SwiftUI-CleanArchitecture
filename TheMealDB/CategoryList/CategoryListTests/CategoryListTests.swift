@@ -204,6 +204,36 @@ class CategoryListTests: XCTestCase {
         
     }
     
+    // MARK: - Category list has right title
+    
+    func testCategoryList() throws {
+        // Instantiate the category list view
+        
+        let subject = CategoryListView()
+        
+        // load the categories
+        
+        subject.presenter.fetchCategories()
+        
+        // Make waiter
+        
+        let promise = expectation(description: "200 OK")
+        
+        let waiter = XCTWaiter.wait(for: [promise], timeout: 1.0)
+        
+        if waiter == XCTWaiter.Result.timedOut {
+            
+            let list = try subject.body
+                .inspect()
+                .vStack(0)
+                .navigationView(0)
+                .group(0)
+                .list(0)
+            XCTAssertTrue(!list.isEmpty)
+            
+        }
+    }
+    
     // MARK: - Check Category List
     
     func testCheckCategoryList() {
